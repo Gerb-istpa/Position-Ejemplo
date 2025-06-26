@@ -33,39 +33,43 @@
             <!-- TARJETA CON ELEMENTOS SUPERPUESTOS -->
             <div class="tarjeta-imagen">
                 <img src="https://picsum.photos/400/300" alt="Imagen de ejemplo">
-                <div cla <!-- CONTENIDO PARA HACER SCROLL -->
-                    <div class="contenido-largo">
-                        <h3>📍 Position: Fixed</h3>
-                        <p>El header y el botón flotante usan <strong>position: fixed</strong>. Esto significa que
-                            permanecen en la misma posición en la pantalla sin importar cuánto hagas scroll. Son muy
-                            útiles para elementos de navegación y botones de acción que quieres que siempre estén
-                            disponibles.</p>
+                <div class="overlay-texto">
+                    <h3>Texto Superpuesto</h3>
+                    <p>Este texto está encima de la imagen usando position: absolute</p>
+                </div>
+            </div>
+            <div class="contenido-largo">
+                <h3>📍 Position: Fixed</h3>
+                <p>El header y el botón flotante usan <strong>position: fixed</strong>. Esto significa que
+                    permanecen en la misma posición en la pantalla sin importar cuánto hagas scroll. Son muy
+                    útiles para elementos de navegación y botones de acción que quieres que siempre estén
+                    disponibles.</p>
 
-                        <h3>📍 Position: Relative</h3>
-                        <p>La tarjeta de imagen usa <strong>position: relative</strong>. Esto crea un "contexto de
-                            posicionamiento" para sus elementos hijos. Aunque el elemento se comporta normalmente en el
-                            flujo del documento, ahora puede contener elementos con position: absolute.</p>
+                <h3>📍 Position: Relative</h3>
+                <p>La tarjeta de imagen usa <strong>position: relative</strong>. Esto crea un "contexto de
+                    posicionamiento" para sus elementos hijos. Aunque el elemento se comporta normalmente en el
+                    flujo del documento, ahora puede contener elementos con position: absolute.</p>
 
-                        <h3>📍 Position: Absolute</h3>
-                        <p>El texto superpuesto sobre la imagen usa <strong>position: absolute</strong>. Se posiciona en
-                            relación a su padre más cercano que tenga position: relative (en este caso, la tarjeta). No
-                            ocupa espacio en el flujo normal del documento.</p>
+                <h3>📍 Position: Absolute</h3>
+                <p>El texto superpuesto sobre la imagen usa <strong>position: absolute</strong>. Se posiciona en
+                    relación a su padre más cercano que tenga position: relative (en este caso, la tarjeta). No
+                    ocupa espacio en el flujo normal del documento.</p>
 
-                        <h3>📍 Z-Index</h3>
-                        <p>Para controlar qué elementos aparecen encima de otros, usamos <strong>z-index</strong>.
-                            Valores más altos aparecen al frente. En esta página: header (100), botón flotante (200),
-                            notificación (300).</p>
+                <h3>📍 Z-Index</h3>
+                <p>Para controlar qué elementos aparecen encima de otros, usamos <strong>z-index</strong>.
+                    Valores más altos aparecen al frente. En esta página: header (100), botón flotante (200),
+                    notificación (300).</p>
 
-                        <h3>🎯 Casos de Uso Comunes</h3>
-                        <p>El posicionamiento CSS es fundamental para crear interfaces modernas: menús fijos, modales,
-                            tooltips, elementos decorativos, barras de notificación, y mucho más. Cada tipo de
-                            posicionamiento tiene su propósito específico.</p>
+                <h3>🎯 Casos de Uso Comunes</h3>
+                <p>El posicionamiento CSS es fundamental para crear interfaces modernas: menús fijos, modales,
+                    tooltips, elementos decorativos, barras de notificación, y mucho más. Cada tipo de
+                    posicionamiento tiene su propósito específico.</p>
 
-                        <h3>💡 Consejos Importantes</h3>
-                        <p>Recuerda siempre probar tu diseño en diferentes tamaños de pantalla. Los elementos
-                            posicionados pueden comportarse diferente en dispositivos móviles. Usa las herramientas de
-                            desarrollador del navegador para experimentar con los valores en tiempo real.</p>
-                    </div>
+                <h3>💡 Consejos Importantes</h3>
+                <p>Recuerda siempre probar tu diseño en diferentes tamaños de pantalla. Los elementos
+                    posicionados pueden comportarse diferente en dispositivos móviles. Usa las herramientas de
+                    desarrollador del navegador para experimentar con los valores en tiempo real.</p>
+            </div>
         </section>
         <section id="contacto" class="seccion-contacto">
             <h2>¡Excelente trabajo!</h2>
