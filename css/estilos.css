@@ -1,0 +1,249 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+.header-fijo {
+    width: 100%;
+    /* Ancho completo */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Negro con 70% opacidad - MÁS TRANSPARENTE */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* Pegado arriba */
+    left: 0;
+    padding: 1rem 2rem;
+
+    /* Pegado a la izquierda */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: rgba(220, 127, 127, 0.7);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+/* NOTIFICACIÓN FLOTANTE EXTRA */
+.notificacion {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    z-index: 300;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* IMPORTANTE: Agregar espacio arriba del contenido */
+.contenido-principal {
+    background-color: aqua;
+    margin-top: 80px;
+    /* Espacio para el header fijo */
+    padding: 2rem;
+
+    /* SECCIONES BÁSICAS */
+    .seccion-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    }
+
+    .seccion-contenido {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        /* TARJETA CON IMAGEN - position: relative */
+        .tarjeta-imagen {
+            position: relative;
+            /* Crea un contexto para absolute */
+            width: 400px;
+            height: 300px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            /* Oculta lo que sale del contenedor */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            /* EFECTO HOVER - Mostrar texto al pasar el mouse */
+            &:hover .overlay-texto {
+                transform: translateY(0);
+                /* Mostrar texto */
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* Ajusta la imagen */
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            /* OVERLAY TEXTO - position: absolute */
+            .overlay-texto {
+                position: absolute;
+                /* Posicionado absoluto dentro de .tarjeta-imagen */
+                bottom: 0;
+                /* Pegado abajo */
+                left: 0;
+                /* Pegado a la izquierda */
+                right: 0;
+                /* Pegado a la derecha */
+                background: linear-gradient(transparent, rgba(244, 9, 9, 0.8));
+                color: white;
+                padding: 2rem;
+                transform: translateY(100%);
+                /* Escondido abajo */
+                transition: transform 0.3s ease;
+
+                h3 {
+                    margin-bottom: 0.5rem;
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    opacity: 0.9;
+                }
+            }
+
+            /* CONTENIDO ADICIONAL */
+            .contenido-largo {
+                max-width: 800px;
+                margin: 3rem auto;
+                line-height: 1.8;
+                background-color: #f8f9fa;
+                padding: 2rem;
+                border-radius: 10px;
+
+                h3 {
+                    color: #333;
+                    margin: 2rem 0 1rem 0;
+                    border-left: 4px solid #007bff;
+                    padding-left: 1rem;
+                    font-size: 1.4rem;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                    text-align: justify;
+                    color: #555;
+                }
+            }
+
+            .seccion-contacto {
+                background-color: #333;
+                color: white;
+                padding: 4rem 2rem;
+                text-align: center;
+                margin-top: 3rem;
+
+                h2 {
+                    margin-bottom: 1rem;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                }
+            }
+
+        }
+    }
+}
+/* BOTÓN FLOTANTE - position: fixed */
+.boton-flotante {
+    position: fixed;
+    /* Fijo en la pantalla */
+    bottom: 30px;
+    /* 30px desde abajo */
+    right: 30px;
+    /* 30px desde la derecha */
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    /* Circular */
+    font-size: 1.5rem;
+    z-index: 200;
+    /* Encima del header */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            /* Efecto de crecimiento */   }
+}
